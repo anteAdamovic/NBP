@@ -1,0 +1,16 @@
+.table-row {
+    cursor: pointer;
+}
+
+.table-header {
+    background-color: #eee !important;
+}
+
+.table-row:hover {
+    background-color: #eee !important;
+}
+
+.first-example, .second-example, .third-example {
+    width: 70%;
+    margin: auto;
+}

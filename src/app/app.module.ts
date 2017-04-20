@@ -12,6 +12,7 @@ import { TransactionsExample } from './components/examples/transactions/transact
 
 // Services
 import { DatabaseService } from './services/database/database.service';
+import { ExampleService } from './services/example/example.service';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'transactions', pathMatch: 'full' },
@@ -29,7 +30,7 @@ const appRoutes: Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [DatabaseService],
+  providers: [DatabaseService, ExampleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

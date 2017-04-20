@@ -10,9 +10,8 @@
     $database = '2264940_nbp';
     $username = '2264940_nbp';
     $password = 'nbp12345';
-  
+
     $db = new mysqli($hostname, $username, $password, $database);
-    $db->set_charset("utf8");  
 
     if($db->connect_error) {
         $databaseConnectionStatus = false;

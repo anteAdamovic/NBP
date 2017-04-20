@@ -1,0 +1,41 @@
+<div class='transactions-examples'>
+    <div class='first-example panel panel-primary'>
+        <div class='panel-heading'>
+            {{ getFirstExample()?.title }}
+        </div>
+        <div class='panel-body'>
+            <p> {{ getFirstExample()?.text }}
+            <p *ngIf="getFirstExample()">
+                <code class='first-example-code' *ngFor="let step of getFirstExample().steps">
+                    <div>{{ step.query }}</div>
+                </code>
+            </p>
+            <p>
+                <button class='btn btn-primary' (click)='execute(getFirstExample().steps)'>Execute</button>
+        </div>
+        <div class='panel-footer'>
+            <code id="first-example-result">
+            </code>
+        </div>
+    </div>
+    <div class='second-example'>
+
+    </div>
+    <div class='third-example'>
+
+    </div>
+
+
+
+
+    <table class="table">
+        <tr class="table-header">
+            <th> Index </th>
+            <th *ngFor="let property of dataProperties">{{ property }}</th>
+        </tr>
+        <tr class="table-row" *ngFor="let data of responseData; let i = index">
+            <td> {{ i + 1 }} </td>
+            <td *ngFor="let property of dataProperties"> {{ data[property] }} </td>
+            <tr>
+    </table>
+</div>

@@ -1,0 +1,56 @@
+{
+    "firstExample": {
+        "title": "First example",
+        "text": "Create a new table 'studentiImePrezime' and populate it with 'ime' and 'prezime' values from table 'studenti' where 'idSmjer' equals 17. Autocommit is enabled.",
+        "steps": [
+            {
+                "type": "CREATE",
+                "query": "CREATE TABLE studentiImePrezime (ime TEXT, prezime TEXT)"
+            },
+            {
+                "type": "CHANGE",
+                "query": "INSERT INTO studentiImePrezime SELECT ime, prezime FROM studenti WHERE idSmjer=17"
+            },
+            {
+                "type": "SELECT",
+                "query": "SELECT ime, prezime FROM studentiImePrezime"
+            }
+        ]
+    },
+    "secondExample": {
+        "title": "Second example",
+        "text": "",
+        "steps": [
+            {
+                "type": "CREATE",
+                "query": "CREATE TABLE studentiImePrezime (ime TEXT, prezime TEXT)"
+            },
+            {
+                "type": "CHANGE",
+                "query": "INSERT INTO studentiImePrezime SELECT ime, prezime FROM studenti WHERE idSmjer=17"
+            },
+            {
+                "type": "SELECT",
+                "query": "SELECT ime, prezime FROM studentiImePrezime"
+            }
+        ]
+    },
+    "thirdExample": {
+        "title": "Third example",
+        "text": "",
+        "steps": [
+            {
+                "type": "CREATE",
+                "query": "CREATE TABLE studentiImePrezime (ime TEXT, prezime TEXT)"
+            },
+            {
+                "type": "CHANGE",
+                "query": "INSERT INTO studentiImePrezime SELECT ime, prezime FROM studenti WHERE idSmjer=17"
+            },
+            {
+                "type": "SELECT",
+                "query": "SELECT ime, prezime FROM studentiImePrezime"
+            }
+        ]
+    }
+}

@@ -12,12 +12,13 @@ export class DatabaseService {
     public query(q: string): Observable<any> {
         const body = JSON.stringify({ query: q });
         return this.http.post(DatabaseService.databaseUrl + 'query.php', body)
-            .map((response: any) => {
-                let array = JSON.parse(response._body);
-                for(let x = 0; x < array.length; x++) {
-                    array[x] = JSON.parse(array[x]);
-                }
-                console.log(array);
-            });
+            .map((response: any) => this.parseResults(JSON.parse(response._body)));
+    }
+
+    private parseResults(data: any): any {
+        for(let x = 0; x < data.length; x++) {
+            data[x] = JSON.parse(data[x]);
+        }
+        return data;
     }
 }
