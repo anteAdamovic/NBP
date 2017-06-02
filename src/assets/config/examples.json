@@ -1,0 +1,89 @@
+{
+    "transactions": {
+        "id": "transactions",
+        "title": "Transakcije",
+        "examples": [
+            {
+                "text": "Profesorica iz Baza Podataka se smilovala svojim studentima i rekla da ove godine svi prolaze. Napišite transakciju koja će svim studentima, koji su pali predmet, podići ocijenu sa 1 na 2.",
+                "reverseQuery": "",
+                "query": "UPDATE ocjene%INNER JOIN kolegiji%ON kolegiji.naziv = 'Baze podataka'%SET ocjene.ocjena = 0%WHERE ocjene.idKolegij = kolegiji.id AND ocjene.ocjena = 1",
+                "tables": ["ocjene", "kolegiji"]
+            },
+            {
+                "text": "Smjerovi 'Informatika' i 'Računarstvo' se stapaju u jedan 'Informatika i Računarstvo', napišite transakciju koja ce kreirati novu tablicu 'informatikaIRacunarstvo' i ubaciti sve studente koji su prethodno pohađali ili 'Informatiku' ili 'Računarstvo' u nju.",
+                "reverseQuery": "DROP TABLE IF EXISTS informatikaIRacunarstvo;",
+                "query": "CREATE TABLE informatikaIRacunarstvo%SELECT *%FROM studenti%LEFT JOIN smjerovi%ON smjerovi.naziv = 'smjer informatika' OR smjerovi.naziv = 'smjer računarstvo'%WHERE studenti.idSmjer = smjerovi.id",
+                "tables": ["informatikaIRacunarstvo", "smjerovi", "studenti"]
+            },
+            {
+                "text": "Kolegij 'Elementi konstrukcija' se vise ne predaje, potrebno je napisati transakciju koja ce izbrisati kolegij iz tablice.",
+                "reverseQuery": "INSERT IGNORE INTO `kolegiji` (`id`, `naziv`, `opis`, `idSmjer`) VALUES (19, 'Elementi konstrukcija', 'Upoznavanje s načelima dimenzioniranja i konstruiranja. Upoznavanje namjene i konstrukcijskih značajki strojnih dijelova i konstrukcija.', 10);",
+                "query": "DELETE%FROM kolegiji%WHERE kolegiji.naziv = 'Elementi konstrukcija'",
+                "tables": ["kolegiji"]
+            }
+        ]
+    },
+    "functions&procedures": {
+        "id": "functions&procedures",
+        "title": "Funkcije & Procedure",
+        "examples": [
+            {
+                "text": "Napisati funkciju koja će izračunati i vratiti prolaznost u postocima na predmetu Baze Podataka.",
+                "query": "",
+                "tables": []
+            },
+            {
+                "text": "Napisati proceduru koja će primiti JMBAG studenta, i povisit mu sve ocjene za 1.",
+                "query": "",
+                "tables": []
+            },
+            {
+                "text": "Napisati funkciju koja će primiti nazivMjesta te vratiti nazivZupanije u kojoj se to mjesto nalazi.",
+                "query": "",
+                "tables": []
+            }
+        ]
+    },
+    "cursors": {
+        "id": "cursors",
+        "title": "Kursori",
+        "examples": [
+
+        ]
+    },
+    "views": {
+        "id": "views",
+        "title": "Views",
+        "examples": [
+
+        ]
+    },
+    "triggers": {
+        "id": "triggers",
+        "title": "Triggers",
+        "examples": [
+
+        ]
+    },
+    "permissions": {
+        "id": "permissions",
+        "title": "Permissions",
+        "examples": [
+
+        ]
+    },
+    "locks": {
+        "id": "locks",
+        "title": "Locks",
+        "examples": [
+
+        ]
+    },
+    "connections": {
+        "id": "connections",
+        "title": "Connections",
+        "examples": [
+
+        ]
+    }
+}

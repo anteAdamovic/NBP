@@ -1,0 +1,46 @@
+.title {
+    margin-left: 30px;
+    margin-bottom: 30px;
+    color: #337ab7;
+}
+
+.description {
+    margin: 10px 30px 10px 30px;
+}
+
+.example {
+    border-top: 1px solid lightgray;
+}
+
+.example .text {
+    margin: 10px 30px 10px 30px;
+    font-size: 16px;
+}
+
+.example .referenced-tables {
+    margin-left: 30px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.example .referenced-table {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    border: 1px solid;
+    border-radius: 20px;
+    font-weight: normal;
+    background-color: #337ab7;
+    color: #fff;
+    cursor: pointer;
+}
+
+.example .code-wrapper {
+    margin: 10px 30px 10px 30px;
+    font-size: 16px;
+}
+
+.example .btn {
+    margin: 10px 30px 20px 30px;
+}
+

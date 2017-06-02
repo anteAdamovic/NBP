@@ -1,0 +1,29 @@
+.tab-active {
+    background-color: #337ab7 !important;
+}
+
+.tab-active a {
+    color: #fff;
+}
+
+.list {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.list>li {
+    position: relative;
+    display: block;
+}
+
+.list>li:hover {
+    background-color: lightgray;
+}
+
+.list>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+}

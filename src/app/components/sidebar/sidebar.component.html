@@ -1,0 +1,7 @@
+<div class='sidebar' *ngIf="loggedIn()" role="navigation">
+    <ul class='list' type="none">
+        <li class='list-item' *ngFor="let example of examples; let i = index" (click)="setActive(i)" [ngClass]="{'tab-active': example.active }">
+            <a [routerLink]="['examples', example.id]"> {{ example.title }} </a>
+        </li>
+    </ul>
+</div>

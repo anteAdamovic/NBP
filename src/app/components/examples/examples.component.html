@@ -1,0 +1,15 @@
+<div class='examples'>
+    <h2 class='title'>{{ getTitle() }}</h2>
+    <div class='description'></div>
+    <div class='example' *ngFor="let example of getExamples()">
+        <div class='text'> {{ example.text }} </div>
+        <div class='referenced-tables'>
+            Referenced tables:
+            <div class='referenced-table' *ngFor="let table of example.tables"> {{ table }} </div>
+        </div>
+        <div class='code-wrapper'>
+            <code class='code' *ngFor="let query of example.query.split('%')"> {{ query }} </code>
+        </div>
+        <button class='btn btn-primary'> Execute Query </button>
+    </div>
+</div>
